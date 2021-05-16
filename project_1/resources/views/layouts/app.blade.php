@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,21 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 </head>
+
 <body>
     @include('inc.header')
 
-    @if(Request::is('/'))
+    @if (Request::is('/'))
         @include('inc.hero')
     @endif
+
+
+
     <div class="container mt-5">
+        @include('inc.messages')
         <div class="row">
             <div class="col-8">
-                @yield('content')   
+                @yield('content')
             </div>
             <div class="col-4">
                 @include('inc.aside')
@@ -27,4 +33,5 @@
 
     @include('inc.footer')
 </body>
+
 </html>
