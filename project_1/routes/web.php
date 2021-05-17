@@ -7,6 +7,15 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/about', function () {
+    $productCategories = App\Models\ProductCategories::all();
+    foreach($productCategories as $category){
+        echo 'Категория: '.$category['name'].'<br>';
+        echo 'товары категории: <br>';
+        foreach ($category->products as $product){
+            echo $product['name'].',';
+        }
+        echo '<br>_________________________'.'<br>';
+    }
     return view('about');
 })->name('about');
 
