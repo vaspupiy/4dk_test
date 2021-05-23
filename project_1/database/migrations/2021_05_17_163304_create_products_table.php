@@ -22,6 +22,10 @@ class CreateProductsTable extends Migration
             $table->foreignId('product_category_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
+
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('image');
+        });
     }
 
     /**
