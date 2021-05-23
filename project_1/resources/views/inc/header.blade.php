@@ -21,6 +21,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('products') }}">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Продукты</font>
+                        </font>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact') }}">
                         <font style="vertical-align: inherit;">
                             <font style="vertical-align: inherit;">Контакты</font>

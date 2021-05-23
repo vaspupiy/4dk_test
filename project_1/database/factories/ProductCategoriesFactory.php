@@ -22,7 +22,8 @@ class ProductCategoriesFactory extends Factory
     public function definition()
     {
         return [
-            'name'=> $this->faker->name,
+            'id' => 999,
+            'name' => "Другие товары",
         ];
     }
 }
